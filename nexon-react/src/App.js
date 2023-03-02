@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Main from './pages/Main';
 import { Route, Routes } from 'react-router-dom';
 import SubNexonGames from './pages/SubNexonGames';
-import SubNews from './pages/SubNewsaaa';
+import SubNews from './pages/SubNews';
 import JoinPage from './pages/member/JoinPage';
 import Login from './pages/member/Login';
 import FindId from './pages/member/FindId';

@@ -33,8 +33,8 @@ const Header = () => {
                    <li><Link to='/SubNexonGames'>넥슨게임즈</Link></li>
                     <li><a href=''>게임</a></li>
                     <li><a href=''>인재채용</a></li>
-                    <li><a href=''>투자정보</a></li>
                     <li><Link to='/media'>미디어</Link></li>
+                    <li><Link to='/writenews'>뉴스등록</Link></li>
                 </ul>
                 <div className='member'>
                     <ul className='membermenu'>

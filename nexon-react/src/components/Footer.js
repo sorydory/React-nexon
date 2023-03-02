@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -20,10 +21,10 @@ const Footer = () => {
                     <div className='inner_right'>
                         <ul className='ft_menu'>
                             <li>
-                                <h4><a href='/'>넥슨게임즈</a></h4>
+                                <h4><Link to='SubNexonGames'>넥슨게임즈</Link></h4>
                                 <ul>
                                     <li>
-                                        <a href='/'>넥슨게임즈</a>
+                                        <Link to='SubNexonGames'>넥슨게임즈</Link>
                                     </li>
                                 </ul>
                             </li>

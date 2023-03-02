@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Title from "../components/Title";
 import { API_URL } from "../config/apiurl";
+import './WriteNews.css';
 
 const WriteNews = () => {
   const [formData, setFormData] = useState({
@@ -60,93 +60,77 @@ const WriteNews = () => {
   };
 
   return (
-    <div className="inner">
-      <Title title="Add News" desc="뉴스 추가하기" />
+    <div className="inner1">
+        <h2>뉴스 등록</h2>
       <form onSubmit={onSubmit}>
-        <table className="defaulttable">
-          <tbody>
-            <tr className="newsname">
-              <td>뉴스 제목</td>
-              <td>
-                <input
-                  type="text"
+        <div className="news">
+            <ul className="newsname">
+              <li>뉴스 제목</li>
+              <li><input type="text"
                   name="n_title"
                   value={formData.n_title}
-                  onChange={onChange}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>등록 날짜</td>
-              <td>
-                <input
-                  type="text"
-                  name="n_date"
-                  value={formData.n_date}
-                  onChange={onChange}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>간략설명</td>
-              <td>
+                  onChange={onChange}/>
+              </li>
+            </ul>
+            <ul>
+              <li>등록 날짜</li>
+              <li>
+                <input type="text" name="n_date" 
+                value={formData.n_date} onChange={onChange}/>
+              </li>
+            </ul>
+            <ul>
+              <li>간략설명</li>
+              <li>
                 <input
                   type="text"
                   name="n_titledesc"
                   value={formData.n_titledesc}
                   onChange={onChange}
                 />
-              </td>
-            </tr>
-            <tr>
-              <td>분류</td>
-              <td>
-                <select
-                  name="n_category"
-                  value={formData.n_category}
-                  onChange={onChange}
-                >
+              </li>
+            </ul>
+            <ul>
+              <li>분류</li>
+              <li>
+                <select name="n_category" value={formData.n_category} onChange={onChange}>
                   <option value="넥슨게임즈">넥슨게임즈</option>
                   <option value="블루아카이브">블루아카이브</option>
                   <option value="서든어택">서든어택</option>
                   <option value="베일드 엑스퍼트">베일드 엑스퍼트</option>
                   <option value="히트2">히트2</option>
                 </select>
-              </td>
-            </tr>
-            <tr>
-              <td>이미지</td>
-              <td>
+              </li>
+            </ul>
+            <ul>
+              <li>이미지</li>
+              <li>
                 <input type="file" name="n_image" onChange={onChangeImage} />
                 {formData.n_image && (
                   <div>
                     <img
                       src={`${API_URL}/upload/news/${formData.n_image}`}
-                      width="80px"
-                      alt=""
-                    />
+                      width="450px"
+                      alt=""/>
                   </div>
                 )}
-              </td>
-            </tr>
-            <tr>
-              <td>상세설명글</td>
-              <td>
+              </li>
+            </ul>
+            <ul>
+              <li>상세설명글</li>
+              <li>
                 <textarea
                   name="n_desc"
                   value={formData.n_desc}
                   onChange={onChange}
                 ></textarea>
-              </td>
-            </tr>
-            <tr className="writenews_btn">
-              <td colSpan={2}>
-                <button type="submit">등록</button>
-                <button type="reset">취소</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </li>
+            </ul>
+            <ul>
+                <button type="submit" className="newsbtn">등록</button>
+                <button type="reset" className="newsbtn">취소</button>
+            </ul>
+        </div>
       </form>
     </div>
   );

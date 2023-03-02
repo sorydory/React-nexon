@@ -1,5 +1,5 @@
 import React from 'react';
-import "./SubNexonGames.css";
+import "../css/SubNexonGames.css";
 
 const SubNexonGames = () => {
     return (
@@ -18,8 +18,8 @@ const SubNexonGames = () => {
                 </p>
             </div>
             <div className='second_section'>
-                <h2>우리의 비전</h2>
-                <div className='sub_visual'>
+                <span>우리의 비전</span>
+                <div className='second_visual'>
                     <h2>We make games better</h2>
                     <p>
                     우리는 더 좋은 게임(Better Game)을 만들고 세상에 보여주기 위해 모였습니다.<br />
