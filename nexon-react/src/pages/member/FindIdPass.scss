@@ -1,7 +1,8 @@
-.Findid {
+.FindidPage {
   width: 100%;
   height: 70vh;
   background-color: #f9f9f9;
+
   h2 {
     margin-top: 90px;
     height: 50px;
@@ -9,7 +10,7 @@
     text-align: center;
     line-height: 5;
   }
-  #Findid {
+  .Findid {
     display: flex;
     width: 1000px;
     background-color: #fff;
@@ -37,6 +38,7 @@
       margin: 5px 0;
       width: 450px;
       height: 40px;
+      margin-top: 50px;
       color: #fff;
       font-size: 15px;
       cursor: pointer;

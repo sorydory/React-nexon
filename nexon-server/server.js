@@ -37,7 +37,7 @@ app.post("/upload", upload.single("img"), (req, res) => {
 const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "1234",
+  password: "12341234",
   port: "3306",
   database: "nexon",
 });
@@ -90,26 +90,27 @@ app.post("/join", async (req, res) => {
 app.post("/login", async (req, res) => {
   // 1)userid에 일치하는 데이터가 있는지 확인
   // 2)userpass 암호화를 해서 쿼리 결과의 패스워드랑 일치하는 체크
-  const { m_id, m_pass } = req.body;
+  const { userid, userpass } = req.body;
 
   conn.query(
-    `select * from member where m_id = '${m_id}'`,
+    `select * from member where m_id = '${userid}' and m_pass = '${userpass}'`,
     (err, result, fields) => {
       //결과가 undefind가 아니고 결과의 0번째가 undefind가 아닐때
       //결과가 있을때
-      console.log(result);
       if (result != undefined && result[0] != undefined) {
+        console.log(result);
+        res.send(result);
         //compare => userpass,result[0].m_pass 비교해서 뒤에 함수호출
-        bcrypt.compare(m_pass, result[0].m_pass, function (err, rese) {
-          //result==true
-          if (rese) {
-            console.log("로그인 성공!");
-            res.send(result);
-          } else {
-            console.log(err);
-            res.send("실패");
-          }
-        });
+        // bcrypt.compare(userpass, result[0].m_pass, function (err, rese) {
+        //   //result==true
+        //   if (rese) {
+        //     console.log("로그인 성공");
+        //     res.send(result);
+        //   } else {
+        //     console.log(err);
+        //     res.send("실패");
+        //   }
+        // });
       } else {
         console.log("데이터가 없습니다.");
       }

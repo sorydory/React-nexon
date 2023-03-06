@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { API_URL } from "../config/apiurl";
-import './WriteNews.css';
+import "./css/WriteNews.css";
 
 const WriteNews = () => {
   const [formData, setFormData] = useState({
@@ -61,75 +61,91 @@ const WriteNews = () => {
 
   return (
     <div className="inner1">
-        <h2>뉴스 등록</h2>
+      <h2>뉴스 등록</h2>
       <form onSubmit={onSubmit}>
         <div className="news">
-            <ul className="newsname">
-              <li>뉴스 제목</li>
-              <li><input type="text"
-                  name="n_title"
-                  value={formData.n_title}
-                  onChange={onChange}/>
-              </li>
-            </ul>
-            <ul>
-              <li>등록 날짜</li>
-              <li>
-                <input type="text" name="n_date" 
-                value={formData.n_date} onChange={onChange}/>
-              </li>
-            </ul>
-            <ul>
-              <li>간략설명</li>
-              <li>
-                <input
-                  type="text"
-                  name="n_titledesc"
-                  value={formData.n_titledesc}
-                  onChange={onChange}
-                />
-              </li>
-            </ul>
-            <ul>
-              <li>분류</li>
-              <li>
-                <select name="n_category" value={formData.n_category} onChange={onChange}>
-                  <option value="넥슨게임즈">넥슨게임즈</option>
-                  <option value="블루아카이브">블루아카이브</option>
-                  <option value="서든어택">서든어택</option>
-                  <option value="베일드 엑스퍼트">베일드 엑스퍼트</option>
-                  <option value="히트2">히트2</option>
-                </select>
-              </li>
-            </ul>
-            <ul>
-              <li>이미지</li>
-              <li>
-                <input type="file" name="n_image" onChange={onChangeImage} />
-                {formData.n_image && (
-                  <div>
-                    <img
-                      src={`${API_URL}/upload/news/${formData.n_image}`}
-                      width="450px"
-                      alt=""/>
-                  </div>
-                )}
-              </li>
-            </ul>
-            <ul>
-              <li>상세설명글</li>
-              <li>
-                <textarea
-                  name="n_desc"
-                  value={formData.n_desc}
-                  onChange={onChange}
-                ></textarea>
-              </li>
-            </ul>
-            <ul>
-                <button type="submit" className="newsbtn">등록</button>
-                <button type="reset" className="newsbtn">취소</button>
-            </ul>
+          <ul className="newsname">
+            <li>뉴스 제목</li>
+            <li>
+              <input
+                type="text"
+                name="n_title"
+                value={formData.n_title}
+                onChange={onChange}
+              />
+            </li>
+          </ul>
+          <ul>
+            <li>등록 날짜</li>
+            <li>
+              <input
+                type="text"
+                name="n_date"
+                value={formData.n_date}
+                onChange={onChange}
+              />
+            </li>
+          </ul>
+          <ul>
+            <li>간략설명</li>
+            <li>
+              <input
+                type="text"
+                name="n_titledesc"
+                value={formData.n_titledesc}
+                onChange={onChange}
+              />
+            </li>
+          </ul>
+          <ul>
+            <li>분류</li>
+            <li>
+              <select
+                name="n_category"
+                value={formData.n_category}
+                onChange={onChange}
+              >
+                <option value="넥슨게임즈">넥슨게임즈</option>
+                <option value="블루아카이브">블루아카이브</option>
+                <option value="서든어택">서든어택</option>
+                <option value="베일드 엑스퍼트">베일드 엑스퍼트</option>
+                <option value="히트2">히트2</option>
+              </select>
+            </li>
+          </ul>
+          <ul>
+            <li>이미지</li>
+            <li>
+              <input type="file" name="n_image" onChange={onChangeImage} />
+              {formData.n_image && (
+                <div>
+                  <img
+                    src={`${API_URL}/upload/news/${formData.n_image}`}
+                    width="450px"
+                    alt=""
+                  />
+                </div>
+              )}
+            </li>
+          </ul>
+          <ul>
+            <li>상세설명글</li>
+            <li>
+              <textarea
+                name="n_desc"
+                value={formData.n_desc}
+                onChange={onChange}
+              ></textarea>
+            </li>
+          </ul>
+          <ul>
+            <button type="submit" className="newsbtn">
+              등록
+            </button>
+            <button type="reset" className="newsbtn">
+              취소
+            </button>
+          </ul>
         </div>
       </form>
     </div>
