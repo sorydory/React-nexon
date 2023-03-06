@@ -24,16 +24,16 @@ DROP TABLE IF EXISTS `member`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `member` (
   `m_no` int NOT NULL AUTO_INCREMENT,
-  `m_name` varchar(45) NOT NULL,
-  `m_id` varchar(45) NOT NULL,
-  `m_pass` varchar(100) NOT NULL,
-  `m_email` varchar(100) NOT NULL,
-  `m_phone` varchar(45) NOT NULL,
-  `m_address1` varchar(45) DEFAULT NULL,
-  `m_address2` varchar(45) DEFAULT NULL,
+  `m_name` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `m_id` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `m_pass` varchar(100) CHARACTER SET utf8 NOT NULL,
   `m_passch` varchar(100) NOT NULL,
+  `m_email` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `m_phone` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `m_address1` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `m_address2` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`m_no`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (1,'admin','admin','1234','admin@naver.com','01012345678','undefined','undefined',''),(2,'','sdrjseka9','7021cufg12!','sdrjseka9@naver.com','010-5068-0498','dfa','sadf','7021cufg12!');
+INSERT INTO `member` VALUES (1,'admin123','admin123','Qwer1234!','Qwer1234!','admin@naver.com','010-1234-5678','dd','dd');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-02 17:33:56
+-- Dump completed on 2023-03-06 17:31:51
