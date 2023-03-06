@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
 -- Host: localhost    Database: nexon
 -- ------------------------------------------------------
--- Server version	8.0.21
+-- Server version	8.0.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,14 +24,14 @@ DROP TABLE IF EXISTS `member`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `member` (
   `m_no` int NOT NULL AUTO_INCREMENT,
-  `m_name` varchar(45) CHARACTER SET utf8 NOT NULL,
-  `m_id` varchar(45) CHARACTER SET utf8 NOT NULL,
-  `m_pass` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `m_name` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `m_id` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `m_pass` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `m_passch` varchar(100) NOT NULL,
-  `m_email` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `m_phone` varchar(45) CHARACTER SET utf8 NOT NULL,
-  `m_address1` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
-  `m_address2` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `m_email` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `m_phone` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `m_address1` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `m_address2` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   PRIMARY KEY (`m_no`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-06 17:31:51
+-- Dump completed on 2023-03-07  0:13:07

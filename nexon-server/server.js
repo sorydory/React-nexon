@@ -37,7 +37,7 @@ app.post("/upload", upload.single("img"), (req, res) => {
 const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "12341234",
+  password: "1234",
   port: "3306",
   database: "nexon",
 });
@@ -182,9 +182,9 @@ app.patch("/updatePw", async (req, res) => {
 
 //뉴스 등록 요청
 app.post("/news", async (req, res) => {
-  const { n_title, n_date, n_titledesc, n_desc, n_image } = req.body;
+  const { n_title, n_date, n_titledesc, n_desc, n_image, n_category } = req.body;
   conn.query(
-    `insert into news (n_title,n_date,n_titledesc,n_desc,n_image,n_category) values(?,?,?,?)`,
+    `insert into news (n_title,n_date,n_titledesc,n_desc,n_image,n_category) values(?,?,?,?,?,?)`,
     [n_title, n_date, n_titledesc, n_desc, n_image, n_category],
     (err, result, fileds) => {
       if (result) {
@@ -196,12 +196,12 @@ app.post("/news", async (req, res) => {
   );
 });
 
-// //음식 데이터 불러오기
-// app.get("/AW/bread",async (req,res) => {
-//     conn.query(`select * from food where f_category='브레드' `,(err,result,fields)=>{
-//         res.send(result)
-//     })
-// })
+//음식 데이터 불러오기
+app.get("/nexon/news",async (req,res) => {
+    conn.query(`select * from news where n_category='news' `,(err,result,fields)=>{
+        res.send(result)
+    })
+})
 // app.get("/AW/cake",async (req,res) => {
 //     conn.query(`select * from food where f_category='케이크' `,(err,result,fields)=>{
 //         res.send(result)

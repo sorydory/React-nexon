@@ -1,0 +1,80 @@
+.join {
+  width: 100%;
+  height: 120vh;
+  background-color: #F9F9F9;
+}
+.join h2 {
+  margin-top: 90px;
+  height: 50px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 5;
+}
+.join .joinpg {
+  display: flex;
+  width: 1000px;
+  background-color: #fff;
+  height: 950px;
+  flex-direction: column;
+  border-top: 3px solid #858585;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 95px;
+}
+.join .joinpg .postcode {
+  background-color: #797777;
+  color: black;
+  border-radius: 5px;
+  border-style: none;
+  width: 100px;
+  height: 30px;
+  font-size: 5px;
+}
+.join .joinpg .postcode:active {
+  background-color: #525050;
+}
+.join .joinpg .postcode:hover {
+  background-color: #918f8f;
+}
+.join .joinpg form {
+  margin-top: 20px;
+}
+.join .joinpg ul {
+  padding: 10px 0;
+}
+.join .joinpg ul input {
+  padding: 20px;
+  width: 450px;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #C2C9D1;
+  background-color: #fff;
+}
+.join .joinpg ul input:focus {
+  border: 1px solid #1890FF;
+}
+.join .joinpg ul .joinbtn {
+  background-color: #1890FF;
+  border-style: none;
+  margin: 5px 0;
+  width: 750px;
+  height: 50px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 35px;
+}
+.join .joinpg ul .joinbtn:hover {
+  background-color: #50a4f3;
+}
+.join .joinpg ul .joinbtn:active {
+  background-color: #1472ca;
+}
+.join .joinpg .adrress input {
+  margin-right: 20px;
+  width: 300px;
+}

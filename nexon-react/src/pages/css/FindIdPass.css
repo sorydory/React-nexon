@@ -1,16 +1,16 @@
-.Findid {
+.FindidPage {
   width: 100%;
   height: 70vh;
   background-color: #f9f9f9;
 }
-.Findid h2 {
+.FindidPage h2 {
   margin-top: 90px;
   height: 50px;
   font-size: 35px;
   text-align: center;
   line-height: 5;
 }
-.Findid #Findid {
+.FindidPage .Findid {
   display: flex;
   width: 1000px;
   background-color: #fff;
@@ -21,36 +21,37 @@
   align-items: center;
   margin-top: 95px;
 }
-.Findid #Findid p {
+.FindidPage .Findid p {
   font-size: 14px;
   color: red;
   padding-top: 70px;
 }
-.Findid #Findid span {
+.FindidPage .Findid span {
   padding: 0 15px;
   font-size: 13px;
 }
-.Findid #Findid span:hover {
+.FindidPage .Findid span:hover {
   color: #1890ff;
 }
-.Findid #Findid button {
+.FindidPage .Findid button {
   background-color: #1890ff;
   border-style: none;
   margin: 5px 0;
   width: 450px;
   height: 40px;
+  margin-top: 50px;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
   border-radius: 3px;
 }
-.Findid #Findid button:hover {
+.FindidPage .Findid button:hover {
   background-color: #50a4f3;
 }
-.Findid #Findid button:active {
+.FindidPage .Findid button:active {
   background-color: #1472ca;
 }
-.Findid #Findid input {
+.FindidPage .Findid input {
   padding: 20px;
   width: 450px;
   height: 40px;
@@ -61,6 +62,6 @@
   border: 1px solid #c2c9d1;
   background-color: #fff;
 }
-.Findid #Findid input:focus {
+.FindidPage .Findid input:focus {
   border: 1px solid #1890ff;
 }
