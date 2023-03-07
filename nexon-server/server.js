@@ -37,7 +37,7 @@ app.post("/upload", upload.single("img"), (req, res) => {
 const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "1234",
+  password: "12341234",
   port: "3306",
   database: "nexon",
 });
@@ -155,7 +155,7 @@ app.patch("/updatePw", async (req, res) => {
   //update 테이블 이름
   //set 필드이름=데이블값
   //where 조건절 update member set m_pass
-  const mytextpass = m_password;
+  const mytextpass = m_pass;
   let myPass = "";
   if (mytextpass != "" && mytextpass != undefined) {
     bcrypt.genSalt(saltRounds, function (err, salt) {
@@ -182,7 +182,8 @@ app.patch("/updatePw", async (req, res) => {
 
 //뉴스 등록 요청
 app.post("/news", async (req, res) => {
-  const { n_title, n_date, n_titledesc, n_desc, n_image, n_category } = req.body;
+  const { n_title, n_date, n_titledesc, n_desc, n_image, n_category } =
+    req.body;
   conn.query(
     `insert into news (n_title,n_date,n_titledesc,n_desc,n_image,n_category) values(?,?,?,?,?,?)`,
     [n_title, n_date, n_titledesc, n_desc, n_image, n_category],
@@ -197,11 +198,14 @@ app.post("/news", async (req, res) => {
 });
 
 //음식 데이터 불러오기
-app.get("/nexon/news",async (req,res) => {
-    conn.query(`select * from news where n_category='news' `,(err,result,fields)=>{
-        res.send(result)
-    })
-})
+app.get("/nexon/news", async (req, res) => {
+  conn.query(
+    `select * from news where n_category='news' `,
+    (err, result, fields) => {
+      res.send(result);
+    }
+  );
+});
 // app.get("/AW/cake",async (req,res) => {
 //     conn.query(`select * from food where f_category='케이크' `,(err,result,fields)=>{
 //         res.send(result)

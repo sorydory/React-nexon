@@ -1,16 +1,17 @@
-.FindidPage {
+.FindPage {
   width: 100%;
   height: 70vh;
   background-color: #f9f9f9;
+  /* Only EditPassword */
 }
-.FindidPage h2 {
+.FindPage h2 {
   margin-top: 90px;
   height: 50px;
   font-size: 35px;
   text-align: center;
   line-height: 5;
 }
-.FindidPage .Findid {
+.FindPage .Findidps {
   display: flex;
   width: 1000px;
   background-color: #fff;
@@ -21,37 +22,30 @@
   align-items: center;
   margin-top: 95px;
 }
-.FindidPage .Findid p {
+.FindPage .Findidps p {
   font-size: 14px;
   color: red;
   padding-top: 70px;
+  padding-bottom: 5px;
 }
-.FindidPage .Findid span {
-  padding: 0 15px;
-  font-size: 13px;
-}
-.FindidPage .Findid span:hover {
-  color: #1890ff;
-}
-.FindidPage .Findid button {
+.FindPage .Findidps button {
   background-color: #1890ff;
   border-style: none;
   margin: 5px 0;
   width: 450px;
   height: 40px;
-  margin-top: 50px;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
   border-radius: 3px;
 }
-.FindidPage .Findid button:hover {
+.FindPage .Findidps button:hover {
   background-color: #50a4f3;
 }
-.FindidPage .Findid button:active {
+.FindPage .Findidps button:active {
   background-color: #1472ca;
 }
-.FindidPage .Findid input {
+.FindPage .Findidps input {
   padding: 20px;
   width: 450px;
   height: 40px;
@@ -62,6 +56,10 @@
   border: 1px solid #c2c9d1;
   background-color: #fff;
 }
-.FindidPage .Findid input:focus {
+.FindPage .Findidps input:focus {
   border: 1px solid #1890ff;
+}
+.FindPage .editpassword {
+  display: flex;
+  flex-direction: column;
 }

@@ -52,14 +52,14 @@ const FindPassword = () => {
       });
   };
   return (
-    <div className="Findid">
+    <div className="FindPage">
       <h2>비밀번호 찾기</h2>
       {idInfo ? (
         <EditPassword />
       ) : (
         <>
           <form onSubmit={onSubmit}>
-            <div id="Findid">
+            <div className="Findidps">
               <div>
                 <p>* 가입시 입력한 회원정보를 입력해 주세요.</p>
               </div>

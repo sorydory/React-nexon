@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/SubNews.css";
+import { Link } from "react-router-dom";
 
 const SubNews = () => {
   return (
@@ -7,7 +8,9 @@ const SubNews = () => {
       <div className="headmenu">
         <p className="text">
           <img src="./images/home.png" />
-          <span>Home</span>
+          <span>
+            <Link to="/">Home</Link>
+          </span>
           <span>미디어</span>
           <span>
             <b>뉴스</b>

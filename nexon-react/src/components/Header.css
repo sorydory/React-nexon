@@ -47,9 +47,13 @@
 .hidden ul li {
   padding: 20px 30px;
 }
-
+.membermenu {
+  display: flex;
+  justify-content: space-between;
+}
 .membermenu li {
   cursor: pointer;
+  padding: 0 10px;
 }
 .membermenu li:hover {
   color: #ccc;

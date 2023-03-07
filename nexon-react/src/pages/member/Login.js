@@ -26,18 +26,19 @@ const Login = () => {
     //form전송이벤트 제거
     e.preventDefault();
     //인풋에 입력되었는지 체크
-    if (loginData.userid === '' || loginData.userpass === '') {
+    if (loginData.userid === "" || loginData.userpass === "") {
       alert("이메일과 비밀번호를 입력해주세요");
-    }else{
-      axios.post(`${API_URL}/login`, loginData)
-        .then(result => {
+    } else {
+      axios
+        .post(`${API_URL}/login`, loginData)
+        .then((result) => {
           const { m_id, m_name } = result.data[0];
-          if ( m_id && m_name) {
+          if (m_id && m_name) {
             alert("로그인 되었습니다.");
             //현재 시간 객체 생성
             let expires = new Date();
             //60분 더한 값으로 변경
-            expires.setMinutes(expires.getMinutes()+60);
+            expires.setMinutes(expires.getMinutes() + 60);
             //쿠키생성
             setCookie("username", `${m_id}`, { path: "/", expires });
             setCookie("username", `${m_name}`, { path: "/", expires });
@@ -45,9 +46,9 @@ const Login = () => {
             dispatch(goToHome(navigate));
           }
         })
-        .catch(e=>{
-          console.log(e)
-        })
+        .catch((e) => {
+          console.log(e);
+        });
     }
   };
   return (
@@ -98,12 +99,12 @@ const Login = () => {
         <div className="btns">
           <button type="submit">로그인</button>
           <button type="button">
-            <Link to="/join" >회원가입</Link>
+            <Link to="/join">회원가입</Link>
           </button>
         </div>
       </form>
     </div>
   );
-}
+};
 
 export default Login;

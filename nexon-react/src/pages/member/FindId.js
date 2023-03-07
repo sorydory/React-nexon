@@ -68,10 +68,10 @@ const FindId = () => {
     }
   };
   return (
-    <div className="FindidPage">
+    <div className="FindPage">
       <h2>아이디 찾기</h2>
       <form onSubmit={onSubmit}>
-        <div className="Findid">
+        <div className="Findidps">
           <div>
             <p>* 가입시 입력한 회원정보를 입력해 주세요.</p>
           </div>
