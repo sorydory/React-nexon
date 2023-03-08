@@ -206,11 +206,14 @@ app.get("/nexon/news", async (req, res) => {
     }
   );
 });
-// app.get("/AW/cake",async (req,res) => {
-//     conn.query(`select * from food where f_category='케이크' `,(err,result,fields)=>{
-//         res.send(result)
-//     })
-// })
+app.get("/nexon/news", async (req, res) => {
+  conn.query(
+    `select * from news where n_category='서든어택' `,
+    (err, result, fields) => {
+      res.send(result);
+    }
+  );
+});
 // app.get("/AW/sandwich",async (req,res) => {
 //     conn.query(`select * from food where f_category='샌드위치 & 샐러드' `,(err,result,fields)=>{
 //         res.send(result)

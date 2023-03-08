@@ -1,14 +1,14 @@
 import axios from "axios";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { API_URL } from "../config/apiurl";
-import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { getCookie } from '../util/cookie';
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { getCookie } from "../util/cookie";
 import "./css/WriteNews.css";
 
 const WriteNews = () => {
   const navigate = useNavigate();
-  const isLogin = useSelector(state=>state.logincheck.isLogin);
+  const isLogin = useSelector((state) => state.logincheck.isLogin);
   const username = getCookie("username");
   const [formData, setFormData] = useState({
     n_title: "",
@@ -16,7 +16,7 @@ const WriteNews = () => {
     n_titledesc: "",
     n_desc: "",
     n_image: "",
-    n_category: "",
+    n_category: "news",
   });
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +34,8 @@ const WriteNews = () => {
     //폼태그에 데이터 추가하기
     imageFormData.append("img", e.target.files[0]);
     //전송
-    axios.post(`${API_URL}/upload`, imageFormData, {
+    axios
+      .post(`${API_URL}/upload`, imageFormData, {
         headers: { "content-type": "multipart/formdata" },
       })
       .then((res) => {
@@ -60,17 +61,17 @@ const WriteNews = () => {
       .post(`${API_URL}/news`, formData)
       .then((res) => {
         alert("등록되었습니다.");
-        navigate('/news');
+        navigate("/news");
       })
-      .catch((e) => console.log(e))
-  }
-  useEffect(()=>{
-    if(!isLogin || username !== 'admin123'){
-        alert("관리자만 접근할수 있습니다.");
-        navigate('/');
+      .catch((e) => console.log(e));
+  };
+  useEffect(() => {
+    if (!isLogin || username !== "admin123") {
+      alert("관리자만 접근할수 있습니다.");
+      navigate("/");
     }
-  },[isLogin,username,navigate])
-  if(!isLogin || username !== 'admin123') return null;
+  }, [isLogin, username, navigate]);
+  if (!isLogin || username !== "admin123") return null;
   return (
     <div className="inner1">
       <h2>뉴스 등록</h2>
@@ -132,7 +133,7 @@ const WriteNews = () => {
               {formData.n_image && (
                 <div>
                   <img
-                    src={`${API_URL}/upload/news/${formData.n_image}`}
+                    src={`${API_URL}/upload/${formData.n_image}`}
                     width="450px"
                     alt=""
                   />
