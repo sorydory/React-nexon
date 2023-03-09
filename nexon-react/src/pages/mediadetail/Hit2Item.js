@@ -1,7 +1,7 @@
 import React from "react";
 import { API_URL } from "../../config/apiurl";
 
-const SuddenItem = ({ item }) => {
+const Hit2Item = ({ item }) => {
   console.log(item);
   return (
     <ul className="newscss">
@@ -24,4 +24,4 @@ const SuddenItem = ({ item }) => {
   );
 };
 
-export default SuddenItem;
+export default Hit2Item;

@@ -197,16 +197,8 @@ app.post("/news", async (req, res) => {
   );
 });
 
-//음식 데이터 불러오기
-app.get("/nexon/news", async (req, res) => {
-  conn.query(
-    `select * from news where n_category='news' `,
-    (err, result, fields) => {
-      res.send(result);
-    }
-  );
-});
-app.get("/nexon/news", async (req, res) => {
+//뉴스 데이터 불러오기
+app.get("/nexon/news/sudden", async (req, res) => {
   conn.query(
     `select * from news where n_category='서든어택' `,
     (err, result, fields) => {
@@ -214,31 +206,38 @@ app.get("/nexon/news", async (req, res) => {
     }
   );
 });
-// app.get("/AW/sandwich",async (req,res) => {
-//     conn.query(`select * from food where f_category='샌드위치 & 샐러드' `,(err,result,fields)=>{
-//         res.send(result)
-//     })
-// })
-// app.get("/AW/food",async (req,res) => {
-//     conn.query(`select * from food where f_category='따뜻한 푸드' `,(err,result,fields)=>{
-//         res.send(result)
-//     })
-// })
-// app.get("/AW/fruit",async (req,res) => {
-//     conn.query(`select * from food where f_category='과일 & 요거트' `,(err,result,fields)=>{
-//         res.send(result)
-//     })
-// })
-// app.get("/AW/snack",async (req,res) => {
-//     conn.query(`select * from food where f_category='스낵 & 미니 디저트' `,(err,result,fields)=>{
-//         res.send(result)
-//     })
-// })
-// app.get("/AW/icecream",async (req,res) => {
-//     conn.query(`select * from food where f_category='아이스크림' `,(err,result,fields)=>{
-//         res.send(result)
-//     })
-// })
+app.get("/nexon/news/hit2", async (req, res) => {
+  conn.query(
+    `select * from news where n_category='히트2' `,
+    (err, result, fields) => {
+      res.send(result);
+    }
+  );
+});
+app.get("/nexon/news/nexongames", async (req, res) => {
+  conn.query(
+    `select * from news where n_category='넥슨게임즈' `,
+    (err, result, fields) => {
+      res.send(result);
+    }
+  );
+});
+app.get("/nexon/news/blue", async (req, res) => {
+  conn.query(
+    `select * from news where n_category='블루아카이브' `,
+    (err, result, fields) => {
+      res.send(result);
+    }
+  );
+});
+app.get("/nexon/news/veiled", async (req, res) => {
+  conn.query(
+    `select * from news where n_category='베일드엑스퍼트' `,
+    (err, result, fields) => {
+      res.send(result);
+    }
+  );
+});
 
 //서버를 구동
 app.listen(port, () => {

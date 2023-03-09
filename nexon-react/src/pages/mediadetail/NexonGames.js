@@ -3,28 +3,30 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Title from "../../components/Title";
 import { API_URL } from "../../config/apiurl";
-import { getSudden } from "../../modules/news";
-import SuddenItem from "./SuddenItem";
+import { getNexonGames } from "../../modules/news";
+import NexonGamesItem from "./NexonGamesItem";
 
-const Sudden = () => {
+const NexonGames = () => {
   const NewsData = async () => {
-    const data = await axios.get(`${API_URL}/nexon/news/sudden`);
+    const data = await axios.get(`${API_URL}/nexon/news/nexongames`);
     return data;
   };
-  const { loading, data, error } = useSelector((state) => state.news.sudden);
+  const { loading, data, error } = useSelector(
+    (state) => state.news.nexongames
+  );
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getSudden(NewsData));
+    dispatch(getNexonGames(NewsData));
   }, [dispatch]);
   if (loading) return <div>로딩중입니다.</div>;
   if (error) return <div>에러가 발생했습니다.</div>;
   if (!data) return <div>데이터 없음</div>;
   return (
     <div>
-      <Title title="서든어택" desc="" />
-      <SuddenItem item={data} />
+      <Title title="넥슨게임즈" desc="" />
+      <NexonGamesItem item={data} />
     </div>
   );
 };
 
-export default Sudden;
+export default NexonGames;

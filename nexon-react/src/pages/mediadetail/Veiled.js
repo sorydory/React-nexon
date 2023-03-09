@@ -3,28 +3,28 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Title from "../../components/Title";
 import { API_URL } from "../../config/apiurl";
-import { getSudden } from "../../modules/news";
-import SuddenItem from "./SuddenItem";
+import { getVelied } from "../../modules/news";
+import VeiledItem from "./VeiledItem";
 
-const Sudden = () => {
+const Veiled = () => {
   const NewsData = async () => {
-    const data = await axios.get(`${API_URL}/nexon/news/sudden`);
+    const data = await axios.get(`${API_URL}/nexon/news/veiled`);
     return data;
   };
-  const { loading, data, error } = useSelector((state) => state.news.sudden);
+  const { loading, data, error } = useSelector((state) => state.news.veiled);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getSudden(NewsData));
+    dispatch(getVelied(NewsData));
   }, [dispatch]);
   if (loading) return <div>로딩중입니다.</div>;
   if (error) return <div>에러가 발생했습니다.</div>;
   if (!data) return <div>데이터 없음</div>;
   return (
     <div>
-      <Title title="서든어택" desc="" />
-      <SuddenItem item={data} />
+      <Title title="베일드엑스퍼트" desc="" />
+      <VeiledItem item={data} />
     </div>
   );
 };
 
-export default Sudden;
+export default Veiled;
