@@ -1,0 +1,31 @@
+.newscss {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+.newscss .newsitem {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.newscss .newsitem .newsimg {
+  width: 400px;
+  height: 22em;
+}
+.newscss .newsitem h4 {
+  font-size: 20px;
+}
+.newscss .newsitem h3 {
+  font-size: 14px;
+  font-style: italic;
+}
+.newscss .newsitem .newstit {
+  font-size: 16px;
+}
+.newscss .newsitem .newsdesc {
+  font-size: 14px;
+}

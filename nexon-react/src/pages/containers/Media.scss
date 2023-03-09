@@ -3,7 +3,18 @@
   width: 100%;
   max-width: 1500px;
   margin: 150px auto;
+  h2 {
+    font-size: 50px;
+  }
   .select {
     margin-top: 50px;
+    .selectmenu {
+      display: flex;
+      border: 1px solid #eee;
+      justify-content: space-between;
+      li {
+        padding: 0 30px;
+      }
+    }
   }
 }

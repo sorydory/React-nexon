@@ -1,12 +1,13 @@
 import React from "react";
 import { API_URL } from "../../config/apiurl";
+import "./Item.css";
 
 const BlueItem = ({ item }) => {
   console.log(item);
   return (
     <ul className="newscss">
       <li className="newsitem">
-        {item.map((item) => (
+        {item.map(item => (
           <div key={`${item.n_no}`}>
             <img
               className="news"
@@ -14,7 +15,7 @@ const BlueItem = ({ item }) => {
               alt=""
             />
             <h4>{item.n_title}</h4>
-            <h2>{item.n_date}</h2>
+            <h3>{item.n_date}</h3>
             <p className="newstit">{item.n_titledesc}</p>
             <p className="newsdesc">{item.n_desc}</p>
           </div>

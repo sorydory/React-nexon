@@ -8,7 +8,7 @@ import "./css/WriteNews.css";
 
 const WriteNews = () => {
   const navigate = useNavigate();
-  const isLogin = useSelector((state) => state.logincheck.isLogin);
+  const isLogin = useSelector(state => state.logincheck.isLogin);
   const username = getCookie("username");
   const [formData, setFormData] = useState({
     n_title: "",
@@ -18,7 +18,7 @@ const WriteNews = () => {
     n_image: "",
     n_category: "news",
   });
-  const onChange = (e) => {
+  const onChange = e => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -27,7 +27,7 @@ const WriteNews = () => {
   };
   //input타입이 file인 input이 onChange되었을때 호출되는 함수
   //변경된 파일을 서버로 업로드 전송하기
-  const onChangeImage = (e) => {
+  const onChangeImage = e => {
     const { name } = e.target;
     //폼태그 생성하기
     const imageFormData = new FormData();
@@ -38,18 +38,18 @@ const WriteNews = () => {
       .post(`${API_URL}/upload`, imageFormData, {
         headers: { "content-type": "multipart/formdata" },
       })
-      .then((res) => {
+      .then(res => {
         console.log(res);
         setFormData({
           ...formData,
           [name]: res.data.imageUrl,
         });
       })
-      .catch((e) => console.log(e));
+      .catch(e => console.log(e));
   };
 
   //폼전송
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     //form태그 전송 이벤트 삭제
     e.preventDefault();
     //인풋체크후 addNews호출
@@ -59,11 +59,11 @@ const WriteNews = () => {
   const addNews = () => {
     axios
       .post(`${API_URL}/news`, formData)
-      .then((res) => {
+      .then(res => {
         alert("등록되었습니다.");
         navigate("/news");
       })
-      .catch((e) => console.log(e));
+      .catch(e => console.log(e));
   };
   useEffect(() => {
     if (!isLogin || username !== "admin123") {
