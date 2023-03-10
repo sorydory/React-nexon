@@ -10,11 +10,13 @@ const SuddenItem = ({ item }) => {
         {item.map((item) => (
           <div key={`${item.n_no}`}>
             <a href="#">
-              <img
-                className="news"
-                src={`${API_URL}/upload/news/${item.n_image}`}
-                alt=""
-              />
+              <div className="imgcover">
+                <img
+                  className="news"
+                  src={`${API_URL}/upload/news/${item.n_image}`}
+                  alt=""
+                />
+              </div>
               <h4>{item.n_title}</h4>
               <h3>{item.n_date}</h3>
               <p className="newstit">{item.n_titledesc}</p>

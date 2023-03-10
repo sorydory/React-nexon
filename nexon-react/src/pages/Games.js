@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/Games.css";
+import "../css/Games.css";
 
 export const Games = () => {
   return (
@@ -125,28 +125,6 @@ export const Games = () => {
           </div>
           <div class="swiper-button-prev">
             <img src="/images/b_prev.png" />
-          </div>
-        </div>
-        <div class="download_site_link">
-          <div class="site_link sudden">
-            <h5>Sitelink</h5>
-            <ul>
-              <li>
-                <a href="https://sa.nexon.com/main/index.aspx">
-                  <img src="/images/su1.png" alt="서든어택 홈페이지" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/SuddenAttack.Korea">
-                  <img src="/images/su2.png" alt="서든어택 페이스북" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/embed/wMX_1X_d22I">
-                  <img src="/images/su3.png" alt="서든어택 유튜브" />
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
