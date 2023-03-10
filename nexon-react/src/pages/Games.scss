@@ -1,0 +1,95 @@
+#wrapper {
+  margin-top: 90px;
+  background-color: #191b1d;
+  #container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    .hed {
+      color: #fff;
+      position: absolute;
+      top: 250px;
+      left: 300px;
+      font-size: 45px;
+    }
+    .subpage {
+      width: 1600px;
+      height: 55vh;
+      img {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    .hed1 {
+      position: absolute;
+      top: 550px;
+      left: 300px;
+      color: gray;
+      font-size: 20px;
+      span {
+        padding: 0 20px;
+      }
+    }
+    .first_text {
+      position: relative;
+      left: 150px;
+    }
+    .text_background {
+      margin: 270px;
+      height: 40vh;
+    }
+    .first_text_wrap {
+      color: #fff;
+      position: absolute;
+      top: 200px;
+      font-size: 40px;
+    }
+    .second_text {
+      position: relative;
+      right: 130px;
+    }
+    .spec {
+      color: #fff;
+      position: absolute;
+      top: 200px;
+      left: 550px;
+      h3 {
+        font-size: 45px;
+        padding-bottom: 50px;
+      }
+      p {
+        font-size: 22px;
+      }
+    }
+    .sudden_attack_character {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .c_text_inner {
+        padding: 100px 0;
+        color: #fff;
+
+        h3 {
+          font-size: 45px;
+          padding-bottom: 20px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+      .c_image {
+        position: relative;
+        left: 150px;
+      }
+    }
+    .iframe_wrap {
+      position: relative;
+      left: 300px;
+      width: 100vh;
+      height: 620px;
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+}

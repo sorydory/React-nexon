@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Media.css";
+import "../css/Media.css";
 import Sudden from "../mediadetail/Sudden";
 import Hit2 from "../mediadetail/Hit2";
 import Blue from "../mediadetail/Blue";
@@ -14,7 +14,7 @@ const Media = () => {
   const [news4, setNews4] = useState(false);
   const [ischecked, setIsCheck] = useState(true); //체크 항목
 
-  const onChange = e => {
+  const onChange = (e) => {
     console.log(ischecked);
     setNews(!news);
     setNews1(!news1);
@@ -23,7 +23,7 @@ const Media = () => {
     setNews4(!news4);
   };
 
-  const onChange1 = e => {
+  const onChange1 = (e) => {
     setIsCheck(!ischecked);
     setNews(!news);
   };

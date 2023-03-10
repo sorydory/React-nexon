@@ -38,10 +38,10 @@ const Header = () => {
             <Link to="/SubNexonGames">넥슨게임즈</Link>
           </li>
           <li>
-            <a href="">게임</a>
+            <Link to="/games">게임</Link>
           </li>
           <li>
-            <a href="">인재채용</a>
+            <a href="/">인재채용</a>
           </li>
           <li>
             <Link to="/media">미디어</Link>

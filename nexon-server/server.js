@@ -37,7 +37,7 @@ app.post("/upload", upload.single("img"), (req, res) => {
 const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "1234",
+  password: "12341234",
   port: "3306",
   database: "nexon",
 });
