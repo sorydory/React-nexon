@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Games.css";
 
-const Games = () => {
+export const Games = () => {
   return (
     <div id="wrapper">
       <div id="container_wr">
@@ -120,10 +120,14 @@ const Games = () => {
               <img src="/images/sudden_05.jpg" alt="슬라이드05" />
             </div>
           </div>
-          <div class="swiper-button-next b_swiper_next"></div>
-          <div class="swiper-button-prev b_swiper_prev"></div>
+          <div class="swiper-button-next">
+            <img src="/images/b_next.png" />
+          </div>
+          <div class="swiper-button-prev">
+            <img src="/images/b_prev.png" />
+          </div>
         </div>
-        <div class="inner_container download_site_link">
+        <div class="download_site_link">
           <div class="site_link sudden">
             <h5>Sitelink</h5>
             <ul>
@@ -149,5 +153,4 @@ const Games = () => {
     </div>
   );
 };
-
 export default Games;
