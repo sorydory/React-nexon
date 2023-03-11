@@ -4,7 +4,7 @@ import "./Games.css";
 const GameWrap5 = () => {
   return (
     <div id="container">
-      <div className="iframe_wrap wrap5">
+      <div className="inner_container wrap5">
         <iframe
           width="560"
           height="520"

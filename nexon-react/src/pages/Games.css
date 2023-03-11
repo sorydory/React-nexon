@@ -151,9 +151,7 @@
 }
 #container .wrap5 {
   height: 70vh;
-  position: relative;
   width: 50vw;
-  margin: 0 auto;
 }
 #container .wrap5 iframe {
   width: 100%;
