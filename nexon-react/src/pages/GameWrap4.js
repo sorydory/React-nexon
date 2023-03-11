@@ -3,8 +3,8 @@ import "./Games.css";
 
 const GameWrap4 = () => {
   return (
-    <div id="wrapper">
-      <div id="container">
+    <div id="container">
+      <div className="inner_container wrap4">
         <div className="sudden_attack_character">
           <div>
             <img src="/images/c1.png" alt="캐릭터1" />
@@ -23,7 +23,7 @@ const GameWrap4 = () => {
             <div className="c_image">
               <img src="/images/c_image.png" alt="서든어택 로고" />
             </div>
-            <div>
+            <div className="c_text_inner">
               <h3>다양한 게임 모드의 효과</h3>
               <p>
                 기존 FPS에서 즐길 수 있었던 데스매치와 폭파미션은

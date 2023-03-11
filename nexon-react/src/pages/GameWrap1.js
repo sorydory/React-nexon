@@ -3,8 +3,8 @@ import "./Games.css";
 
 const GameWrap1 = () => {
   return (
-    <div id="wrapper">
-      <div id="container">
+    <div id="container">
+      <div className="wrap1">
         <div className="head">
           <h2>서든어택</h2>
           <h6>Sudden Attack</h6>

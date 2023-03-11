@@ -1,5 +1,4 @@
 #wrapper {
-  height: 100vh;
   margin-top: 90px;
   background-color: #191b1d;
 
@@ -13,7 +12,7 @@
     height: 100px;
     align-items: center;
     padding: 0 30px;
-    background-color: black;
+    background-color: #191b1d;
     color: #fff;
     z-index: 10;
 
@@ -36,168 +35,256 @@
         }
       }
     }
+  }
 
-    .membermenu {
-      display: flex;
-      justify-content: space-between;
+  .membermenu {
+    display: flex;
+    justify-content: space-between;
 
-      li {
-        cursor: pointer;
-        padding: 0 10px;
+    li {
+      cursor: pointer;
+      padding: 0 10px;
 
-        &:hover {
-          color: #ccc;
-        }
+      &:hover {
+        color: #ccc;
       }
     }
   }
-  //본문1
-  #container {
+}
+//본문전체
+#container {
+  background-color: #191b1d;
+  .inner_container {
     width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  //본문1
+  .wrap1 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
     max-width: 1600px;
     margin: 0 auto;
-    height: 100%;
-
     .head {
       color: #fff;
       position: absolute;
-      top: 250px;
-      left: 300px;
+      top: 170px;
+      left: 180px;
       font-size: 45px;
+      z-index: 1;
     }
-
     .head_bg {
-      width: 1600px;
+      width: 100%;
       height: 55vh;
-
       img {
         width: 100%;
         margin-top: 20px;
       }
     }
-
     .head1 {
       position: absolute;
-      top: 550px;
-      left: 300px;
+      top: 490px;
+      left: 160px;
       color: gray;
       font-size: 20px;
-
-      span {
-        padding: 0 20px;
+      p {
+        span {
+          padding: 0 20px;
+        }
       }
     }
-    //본문2
-    .first_text {
-      position: relative;
-      left: 150px;
-    }
-
+  }
+  //본문2
+  .wrap2 {
+    width: 100%;
+    height: 70vh;
+    position: relative;
     .text_background {
-      margin: 270px;
-      height: 40vh;
+      float: right;
     }
-
     .first_text_wrap {
       color: #fff;
       position: absolute;
-      top: 200px;
+      top: 40%;
+      left: 0;
+      transform: translate(0, -40%);
       font-size: 40px;
+      h3 {
+        font-size: 40px;
+        padding-bottom: 50px;
+      }
     }
-
-    .second_text {
-      position: relative;
-      right: 130px;
-    }
-
+  }
+  //본문3
+  .wrap3 {
+    width: 100%;
+    height: 70vh;
+    position: relative;
     .spec {
       color: #fff;
       position: absolute;
-      top: 200px;
-      left: 550px;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
 
       h3 {
         font-size: 45px;
         padding-bottom: 50px;
       }
-
       p {
         font-size: 22px;
       }
     }
-    //본문3
+  }
+  // 본문4
+  .wrap4 {
+    width: 100%;
+    height: 100vh;
     .sudden_attack_character {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-
       .c_text_inner {
         padding: 100px 0;
         color: #fff;
-
         h3 {
           font-size: 45px;
-          padding-bottom: 20px;
+          margin-bottom: 20px;
         }
-
         p {
           font-size: 20px;
+          line-height: 1.5;
         }
       }
-
       .c_image {
-        position: relative;
-        left: 150px;
-      }
-    }
-
-    // 본문4
-    .iframe_wrap {
-      position: relative;
-      left: 350px;
-      width: 90vh;
-      height: 620px;
-
-      iframe {
-        width: 100%;
+        display: flex;
+        justify-content: center;
       }
     }
   }
-  //슬라이드
-  .bottom_slider {
-    height: 500px;
-
-    .swiper-wrapper {
-      display: flex;
-
-      .b_slide {
-        width: 100%;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    .swiper-button-next {
-      position: absolute;
-      left: 1250px;
-      bottom: 100px;
-
-      &:active ._slide {
-        transform: translateX(100px);
-      }
-    }
-
-    .swiper-button-prev {
-      position: absolute;
-      cursor: pointer;
-      left: 750px;
-      bottom: 100px;
-
-      &:active ._slide {
-        transform: translateX(-100px);
-      }
+  //본문5
+  .wrap5 {
+    height: 70vh;
+    position: relative;
+    width: 50vw;
+    margin: 0 auto;
+    iframe {
+      width: 100%;
     }
   }
 }
+
+// //본문1
+// #container {
+//   width: 100%;
+//   max-width: 1600px;
+//   margin: 0 auto;
+//   height: 100%;
+//   background-color: #191b1d;
+
+//   .head {
+//     color: #fff;
+//     position: absolute;
+//     top: 250px;
+//     left: 300px;
+//     font-size: 45px;
+//   }
+
+//   .head_bg {
+//     width: 1600px;
+//     height: 55vh;
+
+//     img {
+//       width: 100%;
+//       margin-top: 20px;
+//     }
+//   }
+
+//   .head1 {
+//     position: absolute;
+//     top: 550px;
+//     left: 300px;
+//     color: gray;
+//     font-size: 20px;
+
+//     span {
+//       padding: 0 20px;
+//     }
+//   }
+//   //본문2
+//   .first_text {
+//     position: relative;
+//     left: 150px;
+//   }
+
+//   .text_background {
+//     margin: 270px;
+//     height: 40vh;
+//   }
+
+//   .first_text_wrap {
+//     color: #fff;
+//     position: absolute;
+//     top: 200px;
+//     font-size: 40px;
+//   }
+//본문3
+//   .second_text {
+//     position: relative;
+//     right: 130px;
+//   }
+
+//   .spec {
+//     color: #fff;
+//     position: absolute;
+//     top: 200px;
+//     left: 550px;
+
+//     h3 {
+//       font-size: 45px;
+//       padding-bottom: 50px;
+//     }
+
+//     p {
+//       font-size: 22px;
+//     }
+//   }
+//   //본문4
+//   .sudden_attack_character {
+//     display: flex;
+//     justify-content: space-evenly;
+//     align-items: center;
+
+//     .c_text_inner {
+//       padding: 100px 0;
+//       color: #fff;
+
+//       h3 {
+//         font-size: 45px;
+//         padding-bottom: 20px;
+//       }
+
+//       p {
+//         font-size: 20px;
+//       }
+//     }
+
+//     .c_image {
+//       position: relative;
+//       left: 150px;
+//     }
+//   }
+
+//   // 본문5
+//   .iframe_wrap {
+//     position: relative;
+//     left: 350px;
+//     width: 90vh;
+//     height: 620px;
+
+//     iframe {
+//       width: 100%;
+//     }
+//   }
+// }

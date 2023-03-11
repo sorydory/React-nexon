@@ -2,8 +2,8 @@ import React from "react";
 
 const GameWrap3 = () => {
   return (
-    <div id="wrapper">
-      <div id="container">
+    <div id="container">
+      <div className="inner_container wrap3">
         <div className="second_text">
           <div className="text_background">
             <img src="/images/suddentext_b2.jpg" alt="background" />
