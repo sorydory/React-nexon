@@ -12,6 +12,7 @@ const Header = () => {
   const logoutClick = () => {
     removeCookie("username");
     removeCookie("useremail");
+    alert("로그아웃 되었습니다.");
     dispatch(setLogout());
   };
   useEffect(() => {
@@ -51,6 +52,7 @@ const Header = () => {
           <ul className="membermenu">
             {isLogin ? (
               <>
+                <span> {username}님 환영합니다.</span>
                 <li onClick={logoutClick}>로그아웃</li>
               </>
             ) : (

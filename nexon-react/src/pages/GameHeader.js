@@ -12,6 +12,7 @@ export const GameHeader = () => {
   const logoutClick = () => {
     removeCookie("username");
     removeCookie("useremail");
+    alert("로그아웃 되었습니다.");
     dispatch(setLogout());
   };
   useEffect(() => {
