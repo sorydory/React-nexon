@@ -1,35 +1,78 @@
 #wrapper {
+  height: 100vh;
   margin-top: 90px;
   background-color: #191b1d;
+}
+#wrapper .menu1 {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  padding: 0 30px;
+  background-color: black;
+  color: #fff;
+  z-index: 10;
+}
+#wrapper .menu1 h1 img {
+  width: 100%;
+}
+#wrapper .menu1 .main_menu {
+  display: flex;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+#wrapper .menu1 .main_menu li {
+  padding: 0 40px;
+  color: #fff;
+}
+#wrapper .menu1 .main_menu li:hover {
+  color: #ccc;
+}
+#wrapper .menu1 .membermenu {
+  display: flex;
+  justify-content: space-between;
+}
+#wrapper .menu1 .membermenu li {
+  cursor: pointer;
+  padding: 0 10px;
+}
+#wrapper .menu1 .membermenu li:hover {
+  color: #ccc;
 }
 #wrapper #container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  height: 100%;
 }
-#wrapper #container .hed {
+#wrapper #container .head {
   color: #fff;
   position: absolute;
   top: 250px;
   left: 300px;
   font-size: 45px;
 }
-#wrapper #container .subpage {
+#wrapper #container .head_bg {
   width: 1600px;
   height: 55vh;
 }
-#wrapper #container .subpage img {
+#wrapper #container .head_bg img {
   width: 100%;
   margin-top: 20px;
 }
-#wrapper #container .hed1 {
+#wrapper #container .head1 {
   position: absolute;
   top: 550px;
   left: 300px;
   color: gray;
   font-size: 20px;
 }
-#wrapper #container .hed1 span {
+#wrapper #container .head1 span {
   padding: 0 20px;
 }
 #wrapper #container .first_text {
@@ -85,7 +128,7 @@
 }
 #wrapper #container .iframe_wrap {
   position: relative;
-  left: 300px;
+  left: 350px;
   width: 90vh;
   height: 620px;
 }

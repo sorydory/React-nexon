@@ -13,7 +13,7 @@ const FindId = () => {
     m_email: "",
     m_id: "",
   });
-  const onChange = (e) => {
+  const onChange = e => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -36,7 +36,7 @@ const FindId = () => {
       });
     }
   }, [formData.m_phone]);
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     const reg4 =
       /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
@@ -44,12 +44,12 @@ const FindId = () => {
       if (reg4.test(formData.m_email)) {
         axios
           .post(`${API_URL}/findid`, formData)
-          .then((res) => {
+          .then(res => {
             setIdInfo(res.data);
             alert(`당신의 아이디는 ${res.data}입니다.`);
             Navigate("/login");
           })
-          .catch((e) => {
+          .catch(e => {
             console.log(e);
           });
       } else {
@@ -60,7 +60,7 @@ const FindId = () => {
         });
       }
     } else {
-      alert("전화번호를 다시 입력해주세요");
+      alert("다시 입력해주세요");
       setFormData({
         ...formData,
         m_phone: "",

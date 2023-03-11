@@ -1,70 +1,136 @@
 #wrapper {
+  height: 100vh;
   margin-top: 90px;
   background-color: #191b1d;
+
+  .menu1 {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    padding: 0 30px;
+    background-color: black;
+    color: #fff;
+    z-index: 10;
+
+    h1 img {
+      width: 100%;
+    }
+
+    .main_menu {
+      display: flex;
+      text-align: center;
+      font-size: 23px;
+      font-weight: bold;
+
+      li {
+        padding: 0 40px;
+        color: #fff;
+
+        &:hover {
+          color: #ccc;
+        }
+      }
+    }
+
+    .membermenu {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        cursor: pointer;
+        padding: 0 10px;
+
+        &:hover {
+          color: #ccc;
+        }
+      }
+    }
+  }
+  //본문1
   #container {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    .hed {
+    height: 100%;
+
+    .head {
       color: #fff;
       position: absolute;
       top: 250px;
       left: 300px;
       font-size: 45px;
     }
-    .subpage {
+
+    .head_bg {
       width: 1600px;
       height: 55vh;
+
       img {
         width: 100%;
         margin-top: 20px;
       }
     }
-    .hed1 {
+
+    .head1 {
       position: absolute;
       top: 550px;
       left: 300px;
       color: gray;
       font-size: 20px;
+
       span {
         padding: 0 20px;
       }
     }
+    //본문2
     .first_text {
       position: relative;
       left: 150px;
     }
+
     .text_background {
       margin: 270px;
       height: 40vh;
     }
+
     .first_text_wrap {
       color: #fff;
       position: absolute;
       top: 200px;
       font-size: 40px;
     }
+
     .second_text {
       position: relative;
       right: 130px;
     }
+
     .spec {
       color: #fff;
       position: absolute;
       top: 200px;
       left: 550px;
+
       h3 {
         font-size: 45px;
         padding-bottom: 50px;
       }
+
       p {
         font-size: 22px;
       }
     }
+    //본문3
     .sudden_attack_character {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+
       .c_text_inner {
         padding: 100px 0;
         color: #fff;
@@ -73,49 +139,62 @@
           font-size: 45px;
           padding-bottom: 20px;
         }
+
         p {
           font-size: 20px;
         }
       }
+
       .c_image {
         position: relative;
         left: 150px;
       }
     }
+
+    // 본문4
     .iframe_wrap {
       position: relative;
-      left: 300px;
+      left: 350px;
       width: 90vh;
       height: 620px;
+
       iframe {
         width: 100%;
       }
     }
   }
+  //슬라이드
   .bottom_slider {
     height: 500px;
+
     .swiper-wrapper {
       display: flex;
+
       .b_slide {
         width: 100%;
+
         img {
           width: 100%;
         }
       }
     }
+
     .swiper-button-next {
       position: absolute;
       left: 1250px;
       bottom: 100px;
+
       &:active ._slide {
         transform: translateX(100px);
       }
     }
+
     .swiper-button-prev {
       position: absolute;
       cursor: pointer;
       left: 750px;
       bottom: 100px;
+
       &:active ._slide {
         transform: translateX(-100px);
       }

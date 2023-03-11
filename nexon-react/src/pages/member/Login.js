@@ -15,23 +15,23 @@ const Login = () => {
     userid: "",
     userpass: "",
   });
-  const onChange = (e) => {
+  const onChange = e => {
     const { name, value } = e.target;
     setLoginData({
       ...loginData,
       [name]: value,
     });
   };
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     //form전송이벤트 제거
     e.preventDefault();
     //인풋에 입력되었는지 체크
     if (loginData.userid === "" || loginData.userpass === "") {
-      alert("이메일과 비밀번호를 입력해주세요");
+      alert("아이디와 비밀번호를 다시 입력해주세요");
     } else {
       axios
         .post(`${API_URL}/login`, loginData)
-        .then((result) => {
+        .then(result => {
           const { m_id, m_name } = result.data[0];
           if (m_id && m_name) {
             alert("로그인 되었습니다.");
@@ -46,7 +46,7 @@ const Login = () => {
             dispatch(goToHome(navigate));
           }
         })
-        .catch((e) => {
+        .catch(e => {
           console.log(e);
         });
     }

@@ -1,0 +1,24 @@
+#media {
+  height: 100%;
+  width: 100%;
+  max-width: 1500px;
+  margin: 150px auto;
+}
+#media h2 {
+  font-size: 50px;
+}
+#media .select {
+  margin-top: 50px;
+}
+#media .select .selectmenu {
+  display: flex;
+  border: 1px solid #eee;
+  justify-content: space-between;
+  width: 1500px;
+  height: 50px;
+  align-items: center;
+  background-color: #999;
+}
+#media .select .selectmenu li {
+  padding: 0 30px;
+}
