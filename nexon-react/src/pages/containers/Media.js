@@ -22,7 +22,6 @@ const Media = () => {
     setNews4(!news4);
     setNews5(!news5);
   };
-
   return (
     <div id="media">
       <h2>NEWS</h2>

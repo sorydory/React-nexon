@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setLogin, setLogout } from "../modules/logincheck";
 import { getCookie, removeCookie } from "../util/cookie";
+import Swal from "sweetalert2";
 
 const Header = () => {
   const isLogin = useSelector(state => state.logincheck.isLogin);
@@ -12,7 +13,7 @@ const Header = () => {
   const logoutClick = () => {
     removeCookie("username");
     removeCookie("useremail");
-    alert("로그아웃 되었습니다.");
+    Swal.fire("로그아웃 되었습니다.");
     dispatch(setLogout());
   };
   useEffect(() => {

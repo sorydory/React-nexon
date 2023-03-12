@@ -6,6 +6,7 @@ import { API_URL } from "../../config/apiurl";
 import { goToHome, setLogin } from "../../modules/logincheck";
 import { setCookie } from "../../util/cookie";
 import "../css/Login.css";
+import Swal from "sweetalert2";
 
 const Login = () => {
   //input입력값 상태관리
@@ -34,7 +35,11 @@ const Login = () => {
         .then(result => {
           const { m_id, m_name } = result.data[0];
           if (m_id && m_name) {
-            alert("로그인 되었습니다.");
+            Swal.fire({
+              icon: "success",
+              title: "로그인 되었습니다.",
+              text: "환영합니다!",
+            });
             //현재 시간 객체 생성
             let expires = new Date();
             //60분 더한 값으로 변경

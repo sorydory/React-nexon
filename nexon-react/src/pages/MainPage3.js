@@ -70,3 +70,54 @@ const MainPage3 = () => {
   );
 };
 export default MainPage3;
+// import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import "./MainPage3.css";
+
+// const MainPage3 = () => {
+//   const [news, setNews] = useState([]);
+
+//   useEffect(() => {
+//     fetch("/api/news")
+//       .then(response => response.json())
+//       .then(data => {
+//         console.log(data); // news 데이터 확인
+//         setNews(data);
+//       });
+//   }, []);
+
+//   return (
+//     <div className="main3">
+//       <div className="main3h">
+//         <h2>News</h2>
+//         <p>
+//           <Link to="/media">
+//             <b>more → </b>
+//           </Link>
+//         </p>
+//       </div>
+//       <div className="main3sub">
+//         <ul>
+//           {news.length === 0 ? (
+//             <p>Loading...</p>
+//           ) : (
+//             news.map(item => (
+//               <li key={item.n_no}>
+//                 <div className="imgbox">
+//                   <img src={item.n_image} alt=""></img>
+//                 </div>
+//                 <div className="titlebox">
+//                   <h4>{item.n_date}</h4>
+//                   <h2>{item.n_title}</h2>
+//                 </div>
+//                 <p>{item.n_titledesc}</p>
+//               </li>
+//             ))
+//           )}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MainPage3;

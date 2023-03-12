@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { API_URL } from "../../config/apiurl";
 
 const EditPassword = () => {
-  const userid = useSelector((state) => state.logincheck.updateId);
+  const userid = useSelector(state => state.logincheck.updateId);
   console.log(userid);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -14,7 +14,7 @@ const EditPassword = () => {
     m_id: userid,
     m_emil: userid,
   });
-  const onChange = (e) => {
+  const onChange = e => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -22,19 +22,19 @@ const EditPassword = () => {
     });
     console.log(formData);
   };
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     if (formData.m_pass === formData.m_passch) {
       //패치는 일부를 업데이트할때 get()조회, post()압력, put() 리소스 전체 업데이트, patch() 리소스 일부를 없데이트
       axios
         .patch(`${API_URL}/updatePw`, formData)
-        .then((res) => {
+        .then(res => {
           if (res.data) {
             alert("패스워드가 변경되었습니다.");
             navigate("/Login");
           }
         })
-        .catch((e) => {
+        .catch(e => {
           console.log(e);
         });
     } else {

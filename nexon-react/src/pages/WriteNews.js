@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getCookie } from "../util/cookie";
 import "./css/WriteNews.css";
+import Swal from "sweetalert2";
 
 const WriteNews = () => {
   const navigate = useNavigate();
@@ -67,7 +68,11 @@ const WriteNews = () => {
   };
   useEffect(() => {
     if (!isLogin || username !== "admin123") {
-      alert("관리자만 접근할수 있습니다.");
+      Swal.fire({
+        icon: "warning",
+        title: "접근할 수 없습니다..",
+        text: "관리자만 접근할 수 있습니다.",
+      });
       navigate("/");
     }
   }, [isLogin, username, navigate]);

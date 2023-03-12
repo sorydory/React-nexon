@@ -6,6 +6,7 @@ import { API_URL } from "../../config/apiurl";
 import { setId } from "../../modules/logincheck";
 import EditPassword from "./EditPassword";
 import "../css/FindIdPass.css";
+import Swal from "sweetalert2";
 
 const FindPassword = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const FindPassword = () => {
     m_id: "",
     m_phone: "",
   });
-  const onChange = (e) => {
+  const onChange = e => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -37,17 +38,21 @@ const FindPassword = () => {
       });
     }
   }, [formData.m_phone]);
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     axios
       .post(`${API_URL}/findpass`, formData)
-      .then((res) => {
-        alert("아이디와 이름이 확인되셨습니다.");
+      .then(res => {
+        Swal.fire({
+          icon: "success",
+          title: "확인되었습니다.",
+          text: "비밀번호를 변경합니다.",
+        });
         setIdInfo(res.data);
         dispatch(setId(res.data));
         console.log(res.data);
       })
-      .catch((e) => {
+      .catch(e => {
         console.log(e);
       });
   };
