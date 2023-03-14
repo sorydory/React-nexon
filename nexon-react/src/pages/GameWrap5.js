@@ -1,5 +1,5 @@
 import React from "react";
-import "./Games.css";
+import "./css/Games.css";
 
 const GameWrap5 = () => {
   return (

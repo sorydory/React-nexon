@@ -1,10 +1,10 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Main from "./pages/Main";
+import Main from "./pages/containers/Main";
 import { Route, Routes } from "react-router-dom";
 import SubNexonGames from "./pages/SubNexonGames";
-import Game from "./pages/Game";
+import Game from "./pages/containers/Game";
 import Media from "./pages/containers/Media";
 import JoinPage from "./pages/member/JoinPage";
 import Login from "./pages/member/Login";

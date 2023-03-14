@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MainPage3.css";
+import "./css/MainPage3.css";
 
 const MainPage3 = () => {
   return (
@@ -16,7 +16,7 @@ const MainPage3 = () => {
       <div className="main3sub">
         <ul>
           <li>
-            <div className="imgbox">
+            <div>
               <img src="./images/main1.jpg" alt=""></img>
             </div>
             <div className="titlebox">
@@ -30,7 +30,7 @@ const MainPage3 = () => {
             </p>
           </li>
           <li>
-            <div className="imgbox">
+            <div>
               <img src="./images/main2.jpg" alt=""></img>
             </div>
             <div className="titlebox">

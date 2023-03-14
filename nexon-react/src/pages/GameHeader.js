@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setLogin, setLogout } from "../modules/logincheck";
 import { getCookie, removeCookie } from "../util/cookie";
-import "./Games.css";
+import "./css/Games.css";
 
 export const GameHeader = () => {
-  const isLogin = useSelector(state => state.logincheck.isLogin);
+  const isLogin = useSelector((state) => state.logincheck.isLogin);
   const username = getCookie("username");
   const dispatch = useDispatch();
   const logoutClick = () => {
@@ -39,7 +39,10 @@ export const GameHeader = () => {
             <Link to="/SubNexonGames">넥슨게임즈</Link>
           </li>
           <li>
-            <Link to="/games">게임</Link>
+            <Link to="/game">게임</Link>
+          </li>
+          <li>
+            <Link to="/game">채용</Link>
           </li>
           <li>
             <Link to="/media">미디어</Link>

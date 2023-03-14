@@ -114,10 +114,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="ft_bot">
-          <div className="copyright">
+          <div>
             <p>ⓒ Nexon Games. All Rights Reserved.</p>
           </div>
-          <div className="family_site">
+          <div className>
             <div className="list_up">
               <button className="list_btn">관련사이트</button>
               <div className="list_content">

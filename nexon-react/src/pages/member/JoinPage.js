@@ -20,7 +20,7 @@ const JoinPage = () => {
     m_address2: "",
   });
   //인풋에 값을 입력하면 name 값과 value 에 맞춰서 기본상태 (setForm 상태를 변환시켜줌)
-  const onChange = e => {
+  const onChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -38,7 +38,7 @@ const JoinPage = () => {
     setIsPopupOpen(false);
   };
   // 주소 넣기
-  const onAddData = data => {
+  const onAddData = (data) => {
     console.log(data);
     setFormData({
       ...formData,
@@ -61,7 +61,7 @@ const JoinPage = () => {
       });
     }
   }, [formData.m_phone]);
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     //입력이 다 되었는지 체크
     const reg1 = /^[a-z0-9A-Z]{8,45}$/;
@@ -78,7 +78,7 @@ const JoinPage = () => {
           if (formData.m_pass === formData.m_passch) {
             console.log("passchgood");
             if (reg4.test(formData.m_email)) {
-              console.log("굿굿");
+              console.log("emailgood");
               if (formData.m_phone.length === 13) {
                 console.log("good");
 
@@ -139,11 +139,11 @@ const JoinPage = () => {
     console.log("호출");
     axios
       .post(`${API_URL}/join`, formData)
-      .then(res => {
+      .then((res) => {
         Swal.fire("회원가입이 완료되었습니다.", "환영합니다!", "success");
         navigate("/Login");
       })
-      .catch(e => {
+      .catch((e) => {
         console.log("에러 발생");
         console.log(e);
       });
