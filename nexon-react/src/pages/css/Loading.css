@@ -1,0 +1,32 @@
+.messagePage {
+  width: 100%;
+  height: 110vh;
+  background-color: #f8f9fa;
+}
+.messagePage .load_inner {
+  width: 100%;
+  max-width: 1600px;
+}
+.messagePage .load_container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.messagePage .load_container img {
+  width: 30%;
+  margin: 0 auto;
+}
+.messagePage .load_container p {
+  font-size: 40px;
+}
+.messagePage .load_container p h5 {
+  font-size: 20px;
+  padding: 10px;
+}
+.messagePage .load_container span {
+  color: #1890ff;
+}

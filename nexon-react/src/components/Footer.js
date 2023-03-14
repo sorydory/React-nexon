@@ -36,61 +36,61 @@ const Footer = () => {
               </li>
               <li>
                 <h4>
-                  <a href="/">게임</a>
+                  <Link to="game">게임</Link>
                 </h4>
                 <ul>
                   <li>
-                    <a href="/">서든어택</a>
+                    <Link to="game">서든어택</Link>
                   </li>
                   <li>
-                    <a href="/">히트2</a>
+                    <Link to="message">히트2</Link>
                   </li>
                   <li>
-                    <a href="/">베일드 엑스퍼트</a>
+                    <Link to="message">베일드 엑스퍼트</Link>
                   </li>
                   <li>
-                    <a href="/">블루 아카이브</a>
+                    <Link to="message">블루 아카이브</Link>
                   </li>
                   <li>
-                    <a href="/">V4</a>
+                    <Link to="message">V4</Link>
                   </li>
                 </ul>
               </li>
               <li>
                 <h4>
-                  <a href="/">인재채용</a>
+                  <Link to="loading">인재채용</Link>
                 </h4>
                 <ul>
                   <li>
-                    <a href="/">기업문화</a>
+                    <Link to="message">기업문화</Link>
                   </li>
                   <li>
-                    <a href="/">피플&컬쳐</a>
+                    <Link to="message">피플&컬쳐</Link>
                   </li>
                   <li>
-                    <a href="/">복지</a>
+                    <Link to="message">복지</Link>
                   </li>
                   <li>
-                    <a href="/">채용</a>
+                    <Link to="message">채용</Link>
                   </li>
                 </ul>
               </li>
               <li>
                 <h4>
-                  <a href="/">투자정보</a>
+                  <Link to="message">투자정보</Link>
                 </h4>
                 <ul>
                   <li>
-                    <a href="/">기업지배구조</a>
+                    <Link to="message">기업지배구조</Link>
                   </li>
                   <li>
-                    <a href="/">주가정보</a>
+                    <Link to="message">주가정보</Link>
                   </li>
                   <li>
-                    <a href="/">재무정보</a>
+                    <Link to="message">재무정보</Link>
                   </li>
                   <li>
-                    <a href="/">공시/공고</a>
+                    <Link to="message">공시/공고</Link>
                   </li>
                 </ul>
               </li>
@@ -117,17 +117,15 @@ const Footer = () => {
           <div>
             <p>ⓒ Nexon Games. All Rights Reserved.</p>
           </div>
-          <div className>
-            <div className="list_up">
-              <button className="list_btn">관련사이트</button>
-              <div className="list_content">
-                <a href="/">넥슨코리아</a>
-                <a href="/">넥슨네트웍스</a>
-                <a href="/">네오플</a>
-                <a href="/">넥슨커뮤니케이션즈</a>
-                <a href="/">엔미디어플랫폼</a>
-                <a href="/">넥슨스페이스</a>
-              </div>
+          <div className="list_up">
+            <button className="list_btn">관련사이트</button>
+            <div className="list_content">
+              <a href="/">넥슨코리아</a>
+              <a href="/">넥슨네트웍스</a>
+              <a href="/">네오플</a>
+              <a href="/">넥슨커뮤니케이션즈</a>
+              <a href="/">엔미디어플랫폼</a>
+              <a href="/">넥슨스페이스</a>
             </div>
           </div>
         </div>

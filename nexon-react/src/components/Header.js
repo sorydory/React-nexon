@@ -7,7 +7,7 @@ import { getCookie, removeCookie } from "../util/cookie";
 import Swal from "sweetalert2";
 
 const Header = () => {
-  const isLogin = useSelector((state) => state.logincheck.isLogin);
+  const isLogin = useSelector(state => state.logincheck.isLogin);
   const username = getCookie("username");
   const dispatch = useDispatch();
   const logoutClick = () => {
@@ -43,7 +43,7 @@ const Header = () => {
             <Link to="/game">게임</Link>
           </li>
           <li>
-            <Link to="/game">채용</Link>
+            <Link to="/loading">채용</Link>
           </li>
           <li>
             <Link to="/media">미디어</Link>

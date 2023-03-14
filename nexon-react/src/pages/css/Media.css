@@ -13,11 +13,12 @@
 #media .select .selectmenu {
   display: flex;
   border: 1px solid #eee;
+  border-radius: 30px;
   justify-content: space-between;
   width: 1500px;
   height: 50px;
   align-items: center;
-  background-color: #999;
+  background-color: #e0e0e0;
 }
 #media .select .selectmenu li {
   padding: 0 30px;
