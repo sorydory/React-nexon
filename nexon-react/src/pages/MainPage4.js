@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./css/MainPage4.css";
 
 const MainPage4 = () => {
@@ -7,7 +8,9 @@ const MainPage4 = () => {
       <div className="main4h">
         <h2>Careers</h2>
         <p>
-          <b>지원하기 →</b>
+          <Link to="loading">
+            <b>지원하기 →</b>
+          </Link>
         </p>
       </div>
       <div className="main4sub">

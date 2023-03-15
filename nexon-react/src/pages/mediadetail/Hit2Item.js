@@ -1,15 +1,16 @@
 import React from "react";
 import { API_URL } from "../../config/apiurl";
 import "../css/Item.css";
+import { Link } from "react-router-dom";
 
 const Hit2Item = ({ item }) => {
   console.log(item);
   return (
     <ul className="newscss">
       <li className="newsitem">
-        {item.map((item) => (
+        {item.map(item => (
           <div key={`${item.n_no}`}>
-            <a href="#">
+            <Link to="/message">
               <div className="imgcover">
                 <img src={`${API_URL}/upload/news/${item.n_image}`} alt="" />
               </div>
@@ -17,7 +18,7 @@ const Hit2Item = ({ item }) => {
               <h3>{item.n_date}</h3>
               <p className="newstit">{item.n_titledesc}</p>
               <p className="newsdesc">{item.n_desc}</p>
-            </a>
+            </Link>
           </div>
         ))}
       </li>
