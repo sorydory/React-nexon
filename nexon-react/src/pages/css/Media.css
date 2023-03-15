@@ -13,7 +13,6 @@
 #media .select .selectmenu {
   display: flex;
   border: 1px solid #eee;
-  border-radius: 30px;
   justify-content: space-between;
   width: 1500px;
   height: 50px;

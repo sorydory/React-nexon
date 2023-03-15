@@ -1,13 +1,13 @@
 .join {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   background-color: #f9f9f9;
   h2 {
-    margin-top: 90px;
     height: 50px;
     font-size: 35px;
     text-align: center;
     line-height: 5;
+    margin-top: 90px;
   }
   .joinpg {
     display: flex;
@@ -18,65 +18,84 @@
     border-top: 3px solid #858585;
     margin: 0 auto;
     align-items: center;
-    margin-top: 95px;
-    .postcode {
-      background-color: #918f8f;
-      color: black;
-      border-radius: 5px;
-      border-style: none;
-      width: 100px;
-      height: 30px;
-      font-size: 5px;
-      &:active {
-        background-color: #525050;
-      }
-      &:hover {
-        background-color: #aaa8a8;
-      }
-    }
-    form {
-      margin-top: 20px;
-    }
-    ul {
-      padding: 10px 0;
-      input {
-        padding: 20px;
-        width: 450px;
-        height: 40px;
-        border-radius: 8px;
-        outline: none;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #c2c9d1;
-        background-color: #fff;
-        &:focus {
-          border: 1px solid #1890ff;
+    margin-top: 90px;
+    .formStyle {
+      display: flex;
+      flex-direction: column;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 20px;
+        width: 100%;
+        max-width: 800px;
+        li {
+          display: flex;
+          align-items: center;
+          .inputBox {
+            padding: 20px;
+            width: 400px;
+            height: 40px;
+            border-radius: 8px;
+            outline: none;
+            margin: 10px;
+            border: 1px solid #c2c9d1;
+            background-color: #fff;
+            &:focus {
+              border: 1px solid #1890ff;
+            }
+          }
         }
       }
       .joinbtn {
-        background-color: #1890ff;
-        border-style: none;
-        margin: 5px 0;
-        width: 750px;
-        height: 50px;
-        color: #fff;
-        font-size: 15px;
-        cursor: pointer;
-        border-radius: 3px;
-        margin-left: 35px;
-        &:hover {
-          background-color: #50a4f3;
+        button {
+          background-color: #1890ff;
+          border-style: none;
+          margin: 5px 0;
+          width: 500px;
+          height: 50px;
+          color: #fff;
+          font-size: 15px;
+          cursor: pointer;
+          border-radius: 3px;
+          margin-left: 35px;
+          &:hover {
+            background-color: #50a4f3;
+          }
+          &:active {
+            background-color: #1472ca;
+          }
         }
-        &:active {
-          background-color: #1472ca;
+        .address {
+          .postcode {
+            background-color: #b3b0b0;
+            color: black;
+            border-radius: 5px;
+            border-style: none;
+            width: 100px;
+            height: 30px;
+            font-size: 5px;
+            &:active {
+              background-color: #838181;
+            }
+            &:hover {
+              background-color: #cac9c9;
+            }
+          }
         }
-      }
-    }
-    .adrress {
-      input {
-        margin-right: 20px;
-        width: 300px;
       }
     }
   }
+}
+//포스트코드 닫기 버튼
+.postCode_btn {
+  position: absolute;
+  top: 30%;
+  left: 58.5%;
+  width: 55px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3px;
+  color: #8b8888;
+  font-size: 15px;
+  cursor: pointer;
 }

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import DaumPostcode from "react-daum-postcode";
-const PopupPostCode = ({ onClose, onAddData }) => {
-  const handleComplete = data => {
+import "../pages/css/JoinPage.css";
+
+const PopupPostCode = (props) => {
+  const [visible, setVisible] = useState(true);
+  // 우편번호 검색 후 주소 클릭 시 실행될 함수, data callback 용
+  const handlePostCode = (data) => {
     let fullAddress = data.address;
     let extraAddress = "";
-
+    setVisible(false);
     if (data.addressType === "R") {
       if (data.bname !== "") {
         extraAddress += data.bname;
@@ -15,22 +19,38 @@ const PopupPostCode = ({ onClose, onAddData }) => {
       }
       fullAddress += extraAddress !== "" ? ` (${extraAddress})` : "";
     }
-    console.log(fullAddress); // e.g. '서울 성동구 왕십리로2길 20 (성수동1가)'
-    onAddData(data);
+    console.log(data);
+    console.log(fullAddress);
+    console.log(data.zonecode);
+    props.onAddData(data);
+    props.onClose();
   };
+
   const postCodeStyle = {
     display: "block",
     position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%,-50%)",
-    width: "600px",
-    height: "600px",
+    top: "60%",
+    left: "53%",
+    transform: "translate(-60%,-53%)",
+    width: "100%",
+    maxWidth: "400px",
+    height: "500px",
+    padding: "7px",
     border: "2px solid #666",
   };
+
   return (
     <div>
-      <DaumPostcode onComplete={handleComplete} style={postCodeStyle} />
+      <DaumPostcode style={postCodeStyle} onComplete={handlePostCode} />
+      <button
+        style={{ display: visible ? "block" : "none" }}
+        onClick={() => {
+          props.onClose();
+        }}
+        className="postCode_btn"
+      >
+        닫기
+      </button>
     </div>
   );
 };

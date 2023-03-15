@@ -152,13 +152,14 @@ const JoinPage = () => {
     <div className="join">
       <h2>회원가입</h2>
       <div className="joinpg">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className="formStyle">
           <ul>
             <li>
               * 아이디<label>(필수)</label>
             </li>
             <li>
               <input
+                className="inputBox"
                 type="text"
                 placeholder="아이디는 최소 8자리이상 입력해주세요"
                 name="m_id"
@@ -173,6 +174,7 @@ const JoinPage = () => {
             </li>
             <li>
               <input
+                className="inputBox"
                 type="text"
                 placeholder="성명"
                 name="m_name"
@@ -187,6 +189,7 @@ const JoinPage = () => {
             </li>
             <li>
               <input
+                className="inputBox"
                 type="password"
                 name="m_pass"
                 value={formData.m_pass}
@@ -199,6 +202,7 @@ const JoinPage = () => {
             <li>* 비밀번호 체크</li>
             <li>
               <input
+                className="inputBox"
                 type="password"
                 name="m_passch"
                 value={formData.m_passch}
@@ -213,6 +217,7 @@ const JoinPage = () => {
             </li>
             <li>
               <input
+                className="inputBox"
                 type="text"
                 placeholder="E-mail@.com 형식으로 맞게 입력하세요."
                 name="m_email"
@@ -227,6 +232,7 @@ const JoinPage = () => {
             </li>
             <li>
               <input
+                className="inputBox"
                 type="text"
                 placeholder="010-0000-0000"
                 name="m_phone"
@@ -251,7 +257,7 @@ const JoinPage = () => {
                 placeholder="상세주소"
                 onChange={onChange}
               />
-              <button className="postcode" onClick={openPostCode}>
+              <button className="postcode" type="button" onClick={openPostCode}>
                 우편번호 찾기
               </button>
               <div id="popupDom">
@@ -266,10 +272,8 @@ const JoinPage = () => {
               </div>
             </li>
           </ul>
-          <ul>
-            <button type="submit" className="joinbtn">
-              가입
-            </button>
+          <ul className="joinbtn">
+            <button type="submit">가입</button>
           </ul>
         </form>
       </div>

@@ -71,7 +71,7 @@ const Footer = () => {
                     <Link to="message">복지</Link>
                   </li>
                   <li>
-                    <Link to="message">채용</Link>
+                    <Link to="loading">채용</Link>
                   </li>
                 </ul>
               </li>

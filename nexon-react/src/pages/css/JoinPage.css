@@ -1,14 +1,14 @@
 .join {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   background-color: #f9f9f9;
 }
 .join h2 {
-  margin-top: 90px;
   height: 50px;
   font-size: 35px;
   text-align: center;
   line-height: 5;
+  margin-top: 90px;
 }
 .join .joinpg {
   display: flex;
@@ -19,48 +19,42 @@
   border-top: 3px solid #858585;
   margin: 0 auto;
   align-items: center;
-  margin-top: 95px;
+  margin-top: 90px;
 }
-.join .joinpg .postcode {
-  background-color: #918f8f;
-  color: black;
-  border-radius: 5px;
-  border-style: none;
-  width: 100px;
-  height: 30px;
-  font-size: 5px;
+.join .joinpg .formStyle {
+  display: flex;
+  flex-direction: column;
 }
-.join .joinpg .postcode:active {
-  background-color: #525050;
+.join .joinpg .formStyle ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+  width: 100%;
+  max-width: 800px;
 }
-.join .joinpg .postcode:hover {
-  background-color: #aaa8a8;
+.join .joinpg .formStyle ul li {
+  display: flex;
+  align-items: center;
 }
-.join .joinpg form {
-  margin-top: 20px;
-}
-.join .joinpg ul {
-  padding: 10px 0;
-}
-.join .joinpg ul input {
+.join .joinpg .formStyle ul li .inputBox {
   padding: 20px;
-  width: 450px;
+  width: 400px;
   height: 40px;
   border-radius: 8px;
   outline: none;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 10px;
   border: 1px solid #c2c9d1;
   background-color: #fff;
 }
-.join .joinpg ul input:focus {
+.join .joinpg .formStyle ul li .inputBox:focus {
   border: 1px solid #1890ff;
 }
-.join .joinpg ul .joinbtn {
+.join .joinpg .formStyle .joinbtn button {
   background-color: #1890ff;
   border-style: none;
   margin: 5px 0;
-  width: 750px;
+  width: 500px;
   height: 50px;
   color: #fff;
   font-size: 15px;
@@ -68,13 +62,36 @@
   border-radius: 3px;
   margin-left: 35px;
 }
-.join .joinpg ul .joinbtn:hover {
+.join .joinpg .formStyle .joinbtn button:hover {
   background-color: #50a4f3;
 }
-.join .joinpg ul .joinbtn:active {
+.join .joinpg .formStyle .joinbtn button:active {
   background-color: #1472ca;
 }
-.join .joinpg .adrress input {
-  margin-right: 20px;
-  width: 300px;
+.join .joinpg .formStyle .joinbtn .address .postcode {
+  background-color: #b3b0b0;
+  color: black;
+  border-radius: 5px;
+  border-style: none;
+  width: 100px;
+  height: 30px;
+  font-size: 5px;
+}
+.join .joinpg .formStyle .joinbtn .address .postcode:active {
+  background-color: #838181;
+}
+.join .joinpg .formStyle .joinbtn .address .postcode:hover {
+  background-color: #cac9c9;
+}
+
+.postCode_btn {
+  position: absolute;
+  top: 30%;
+  left: 58.5%;
+  width: 55px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3px;
+  color: #8b8888;
+  font-size: 15px;
+  cursor: pointer;
 }
