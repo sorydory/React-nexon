@@ -69,21 +69,21 @@ const JoinPage = () => {
     const reg4 =
       /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
     if (reg1.test(formData.m_id) && formData.m_id !== "") {
-      console.log("good");
+      console.log("ok");
       //비밀번호 확인
       if (formData.m_name !== "") {
-        console.log("namegood");
+        console.log("nameok");
         if (formData.m_password !== "" && reg2.test(formData.m_pass)) {
-          console.log("passgood");
+          console.log("passok");
           if (formData.m_pass === formData.m_passch) {
-            console.log("passchgood");
+            console.log("passchok");
             if (reg4.test(formData.m_email)) {
-              console.log("emailgood");
+              console.log("emailok");
               if (formData.m_phone.length === 13) {
-                console.log("good");
+                console.log("ok");
 
                 if (formData.m_address1 !== "" && formData.m_address2 !== "") {
-                  console.log("addressgood");
+                  console.log("addressok");
                   addMember();
                 } else {
                   setFormData({
@@ -161,7 +161,7 @@ const JoinPage = () => {
               <input
                 className="inputBox"
                 type="text"
-                placeholder="아이디는 최소 8자리이상 입력해주세요"
+                placeholder="아이디는 최소 8자리이상 입력해주세요."
                 name="m_id"
                 value={formData.m_id}
                 onChange={onChange}
@@ -176,7 +176,7 @@ const JoinPage = () => {
               <input
                 className="inputBox"
                 type="text"
-                placeholder="성명"
+                placeholder="이름을 입력해주세요."
                 name="m_name"
                 value={formData.m_name}
                 onChange={onChange}
@@ -219,7 +219,7 @@ const JoinPage = () => {
               <input
                 className="inputBox"
                 type="text"
-                placeholder="E-mail@.com 형식으로 맞게 입력하세요."
+                placeholder="E-mail@.com 형식으로 맞게 입력해주세요."
                 name="m_email"
                 value={formData.m_email}
                 onChange={onChange}
@@ -241,7 +241,7 @@ const JoinPage = () => {
               />
             </li>
           </ul>
-          <ul className="adrress">
+          <ul className="address">
             <li>* 주소</li>
             <li>
               <input

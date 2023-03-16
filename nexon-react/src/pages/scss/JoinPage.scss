@@ -1,7 +1,8 @@
 .join {
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   background-color: #f9f9f9;
+
   h2 {
     height: 50px;
     font-size: 35px;
@@ -20,6 +21,7 @@
     align-items: center;
     margin-top: 90px;
     .formStyle {
+      margin: 10px 0;
       display: flex;
       flex-direction: column;
       ul {
@@ -47,6 +49,41 @@
           }
         }
       }
+      .address {
+        li {
+          display: flex;
+          justify-content: space-between;
+        }
+        input {
+          width: 200px;
+          height: 40px;
+          padding: 20px;
+          margin: 10px;
+          border-radius: 8px;
+          outline: none;
+          border: 1px solid #c2c9d1;
+          background-color: #fff;
+          &:focus {
+            border: 1px solid #1890ff;
+          }
+        }
+        .postcode {
+          background-color: #c9c7c7;
+          color: black;
+          border-radius: 5px;
+          border-style: none;
+          width: 100px;
+          height: 30px;
+          font-size: 5px;
+          cursor: pointer;
+          &:active {
+            background-color: #9c9797;
+          }
+          &:hover {
+            background-color: #e6e3e3;
+          }
+        }
+      }
       .joinbtn {
         button {
           background-color: #1890ff;
@@ -66,23 +103,6 @@
             background-color: #1472ca;
           }
         }
-        .address {
-          .postcode {
-            background-color: #b3b0b0;
-            color: black;
-            border-radius: 5px;
-            border-style: none;
-            width: 100px;
-            height: 30px;
-            font-size: 5px;
-            &:active {
-              background-color: #838181;
-            }
-            &:hover {
-              background-color: #cac9c9;
-            }
-          }
-        }
       }
     }
   }
@@ -90,7 +110,7 @@
 //포스트코드 닫기 버튼
 .postCode_btn {
   position: absolute;
-  top: 30%;
+  top: 28%;
   left: 58.5%;
   width: 55px;
   background-color: rgba(255, 255, 255, 0.5);
