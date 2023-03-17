@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
@@ -71,7 +71,7 @@ const Footer = () => {
                     <Link to="message">복지</Link>
                   </li>
                   <li>
-                    <Link to="loading">채용</Link>
+                    <Link to="message">채용</Link>
                   </li>
                 </ul>
               </li>
@@ -119,14 +119,14 @@ const Footer = () => {
           </div>
           <div className="list_up">
             <button className="list_btn">관련사이트</button>
-            <div className="list_content">
-              <a href="/">넥슨코리아</a>
-              <a href="/">넥슨네트웍스</a>
-              <a href="/">네오플</a>
-              <a href="/">넥슨커뮤니케이션즈</a>
-              <a href="/">엔미디어플랫폼</a>
-              <a href="/">넥슨스페이스</a>
-            </div>
+            <ul className="list_content">
+              <li>넥슨코리아</li>
+              <li>넥슨네트웍스</li>
+              <li>네오플</li>
+              <li>넥슨커뮤니케이션즈</li>
+              <li>엔미디어플랫폼</li>
+              <li>넥슨스페이스</li>
+            </ul>
           </div>
         </div>
       </div>

@@ -61,6 +61,22 @@ const JoinPage = () => {
       });
     }
   }, [formData.m_phone]);
+
+  const OnpwCh = () => {
+    const userPw = document.querySelector(".m_pass");
+    const userpwCh = document.querySelector(".m_passch");
+    const passInform = document.querySelector(".passInform");
+    userpwCh.addEventListener("keyup", function () {
+      if (userPw.value !== userpwCh.value) {
+        passInform.innerHTML = "비밀번호가 일치하지 않습니다.";
+        console.log("비밀번호가 일치하지 않습니다.");
+      } else {
+        passInform.innerHTML = "비밀번호가 일치합니다.";
+        console.log("비밀번호가 일치합니다.");
+      }
+    });
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
     //입력이 다 되었는지 체크
@@ -206,7 +222,10 @@ const JoinPage = () => {
                 type="password"
                 name="m_passch"
                 value={formData.m_passch}
-                onChange={onChange}
+                onChange={(e) => {
+                  onChange(e);
+                  OnpwCh(e);
+                }}
                 placeholder="비밀번호와 동일하게 입력해주세요."
               />
             </li>
