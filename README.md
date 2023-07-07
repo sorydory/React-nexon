@@ -52,7 +52,7 @@ Nexon Clone Team Project
 ### [3. 프로젝트 개선사항](#목차-3-프로젝트-개선사항)
 
 > #### 1. 부드러운 페이지 스크롤 구현
-> ❤ react-router-dom을 사용하는 동안 부드러운 페이지 스크롤을 구현하는 것은 React.js에서의 문제. <br/>
+> ❤ react-router-dom을 사용하는 동안 부드러운 페이지 스크롤을 구현하기 어려운 React.js에서의 문제 발견. <br/>
 > ❤ react-router-hash-link 패키지를 이용하여 부드러운 수직 스크롤을 구현하여 단점 보완.
 
 
