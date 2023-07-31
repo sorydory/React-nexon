@@ -31,8 +31,16 @@ Nexon Clone Team Project
 ### 목차
 
 > ### [목차 1. 프로젝트 기능](#1-프로젝트-기능)
->
->
+>로그인
+>![nexon로그인](https://github.com/sorydory/React-nexon/assets/116371230/e87d3abe-bb5f-4a41-938c-61f4a563b9fb)
+> 회원가입 (정규표현식을 사용하여 사용자가 알맞는 값을 입력하게 함, 다음(카카오) 우편번호 검색 서비스 사용)
+![nexon회원가입](https://github.com/sorydory/React-nexon/assets/116371230/fc52dd60-c029-4d29-94fd-ca20f768054f)
+> 관리자 로그인 상태가 아닐 때 뉴스등록 클릭 시
+> ![이용x](https://github.com/sorydory/sorydory.github.io/assets/116371230/1a5a7fb2-adc6-42f6-a1ca-b0b860b37298)
+> 서비스 준비가 되지 않은 부분
+> ![준비중](https://github.com/sorydory/sorydory.github.io/assets/116371230/a601d47d-396b-456b-84a1-9f312fd7fc2c)
+> etc : 관리자로만 로그인시 뉴스등록 기능 사용 가능, 뉴스등록시 사용자가 보이는 뉴스 화면에 리스트 추가, 사용자가 뉴스 게임 종류별 선택 체크박스 클릭시 해당 게임에 대한 뉴스만 출력, MySQL로 뉴스 database 관리
+
 > ### [목차 2. 프로젝트로 얻은 것들](#2-프로젝트로-얻은-것들)
 >
 >
