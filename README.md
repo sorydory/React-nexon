@@ -1,6 +1,6 @@
 
 # 프로젝트명
-Nexon Clone Team Project
+Nexon Clone Project
 
 ### 📍 프로젝트 소개
  리액트를 활용하여 만든 넥슨 클론 웹사이트입니다.
